@@ -76,7 +76,7 @@ def mergeToOrigin(lineJson: list, speedJson: list, stationJson: list):
 
 
 def mergeMain():
-    keys = ["tra", "thsr", 'trtc', 'krtc', 'tymc', 'tmrt', 'klrt', 'ntdlrt']
+    keys = ["tra", "thsr", 'trtc', 'krtc', 'tymc', 'tmrt', 'klrt', 'ntdlrt', 'ntalrt']
     for key in keys:
         print(key)
         lineJson = readJson(f"../data/{key}/line.json")

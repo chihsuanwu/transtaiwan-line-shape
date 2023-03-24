@@ -47,6 +47,9 @@ async function selectChange() {
     } else if (selectValue.startsWith('NTDLRT')) {
         selectedCompany = "NTDLRT";
         await loadData("ntdlrt", selectValue.slice(7));
+    } else if (selectValue.startsWith('NTALRT')) {
+        selectedCompany = "NTALRT";
+        await loadData("ntalrt", selectValue.slice(7));
     } else {
         selectedCompany = "TRA";
         await loadData("tra", selectValue);
@@ -58,7 +61,7 @@ async function selectChange() {
 async function mapTypeChange() {
     selectValue = document.querySelector("#select-type").value;
     console.log(selectValue);
-  
+
     mapType = selectValue;
     drawAll();
 }
