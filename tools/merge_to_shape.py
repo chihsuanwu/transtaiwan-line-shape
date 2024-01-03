@@ -19,7 +19,7 @@ def mergeToOrigin(lineJson: list, speedJson: list, stationJson: list):
 
     lineAndSpeed = []
     for lineName in lineNames:
-        line = next(l for l in lineJson if l["name"] == lineName)['line']
+        line: list = next(l for l in lineJson if l["name"] == lineName)['line']
         speed = next(l for l in speedJson if l["name"] == lineName)['speed']
 
         indexBasedSpeed = []
